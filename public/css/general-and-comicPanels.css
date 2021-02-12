@@ -1,0 +1,209 @@
+
+.text, header {  
+    width: 50%;
+    font-family: Dekko, Comic Sans MS, cursive;
+    position: absolute;
+    transform: skew(-15deg);
+    -webkit-transform: skew(-15deg);
+    background: ghostwhite;
+    text-shadow: none;
+    line-height: 1.7vw;
+    color: rgb(34, 34, 34);
+    -webkit-box-shadow: 5px 5px rgb(34, 34, 34);
+            box-shadow: 5px 5px rgb(34, 34, 34);
+}
+
+header {
+    top: 0;
+    transform: skew(0deg);
+    -webkit-transform: skew(0deg);
+    left: 83%;
+    padding: 1vw 1vw 1vw 1.8vw;
+    font-size: 1.6vw;
+    width: 11%;
+}
+
+body {
+    font-family: 'Bangers', cursive;
+    /*
+    background-image: -o-radial-gradient(#000 40%, transparent 25%);
+    background-image: radial-gradient(#000 40%, transparent 25%);
+    background-size: 4px 4px;
+    */
+    background-color: rgb(199, 232, 239);
+    margin: 0px;
+    color: white;
+    text-shadow: -1px -1px black, 1px 1px black, 2px 2px black;
+}
+
+div, p {
+    margin: 0;
+    color: rgb(34, 34, 34);
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin: 1em 0px;
+    list-style: none;
+    font-size: 1.3vw;
+    color: rgb(81, 240, 61);  
+}
+
+a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);  
+}
+
+/* Begin comic panel styles (the slide-in menus) */
+.comic-pane {
+    width: 45%;
+    position: relative;
+    margin: 0px 3%;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+.comicPaneAnimate {
+    left: 10%;
+    -webkit-transition: all 1300ms cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: all 1300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1300ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 100%;
+}
+
+.fadeOut {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+            opacity: 1;
+            -webkit-transform: translate3d(1%, 0, 0);
+            transform: translate3d(1%, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+    }
+}
+
+@-webkit-keyframes fadeOutLeft {
+    0% {
+            opacity: 1;
+    }
+    100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+            opacity: 1;
+    }
+    100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+}
+  
+.text p {
+    margin: 7% 15% 7% 0;
+    font-size: 1.5vw;
+    -webkit-transform: skew(15deg);
+        transform: skew(15deg);
+}
+
+.text:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 120%;
+    left: -20%;
+    background-color: ghostwhite;
+    border-left: 1px solid rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 5px rgb(34, 34, 34);
+            box-shadow: 0px 5px rgb(34, 34, 34);
+}
+
+/* End comic panel styles */
+
+.portrait {
+    max-height: 17.5vw;
+    max-width: 201px;
+    border-radius: 5%;
+    width: 95%;
+    border: black 3px solid;
+    -webkit-box-shadow: 3px 2px rgb(34, 34, 34);
+            box-shadow: 3px 2px rgb(34, 34, 34);
+}
+
+.portraitBanner {
+    position: absolute;
+    top: 22vw;
+    opacity: 0;
+    font-size: 3vw;
+    color: rgb(81, 240, 61);
+}
+
+@media only screen and (max-width: 700px) {
+
+    li, a {
+        font-size: 2vw;
+    }
+
+    .portrait {
+        max-height: 32vw;
+        min-height: 32vw;
+        min-width: 22vw;
+    }
+
+    .comic-pane {
+        top: -12vw;
+        left: -1vw;
+        width: 70%;
+    }
+
+    .text p {
+        font-size: 3vw;
+        line-height: 2.7vw;
+    }
+
+    .portraitBanner {
+        top: 47vw;
+        font-size: 5.2vw;
+    }
+  }

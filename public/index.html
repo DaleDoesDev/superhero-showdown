@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Biographies, stats, and a battle simulation for comic book heroes and villans (superheroes and supervillans) from comic book publishers such as Marvel and DC Comics.">
+        <title>Superhero Showdown - Home</title>
+
+        <script src="https://kit.fontawesome.com/838ff0a0f6.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Dekko&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/general-and-comicPanels.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/grid-and-buttons.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/dialogues.css" />  
+
+    </head>
+    <body>
+
+        <header>
+            <a href="https://github.com/DaleDoesDev"><i class="fab fa-github"></i> DaleDoesDev</a></i>
+        </header>
+
+        <div class="comic-pane">
+            <div class="text"><p>Welcome to <strong>Superhero Showdown</strong>!
+            Press <strong>RANDOM</strong> to get started.</p>
+            </div>
+        </div>
+
+        <row class="row">
+            <column class="column">
+                <div class="portraitBanner">Advantage</div> <!-- Invisible at start -->
+                <img class="portrait" src="unknownChar.jpg" alt="A portrait style image of a random superhero or supervillan">
+                <button class="btn"><strong>RANDOM</strong></button>
+                <button class="btn hiddenBtn"><strong>BATTLE</strong></button>
+            </column>
+            <column class="column">
+                <div class="dialogue blueDialogue">
+                    <span class="charName"></span>
+                    <ul>
+                        <li>Full Name: <span class="fullName"></span></li>
+                        <li>Alignment: <span class="alignment"></span></li>
+                        <li>Base: <span class="base"></span> </li>
+                        <li>First Appearance: <span class="firstAppear"></span></li>
+                        <li>Publisher: <span class="publisher"></span></li>
+                    </ul>
+                </div>
+            </column>          
+        </row>
+
+        <!-- IE check -->
+        <script>
+        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+            window.location = 'microsoft-edge:' + window.location;
+            setTimeout(function() {
+            window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+            }, 1);
+        }
+        </script>
+
+        <script src="superheroes.js"></script>
+    </body>
+</html>
