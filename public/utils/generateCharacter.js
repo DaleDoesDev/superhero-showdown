@@ -1,3 +1,4 @@
+
 async function generateCharacter(num, char) {
     await fetch(`https://hosted-cors.herokuapp.com/http://www.superheroapi.com/api/10158616269425862/${num}`).then(res => {
         return res.json() //extract JSON object
